@@ -1,0 +1,46 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'YEBO'
+
+block content
+  +header
+
+  +intro
+
+  +slider(true, false)
+    +slide
+      +review("twitter.png", "AOD New York @aod", "35 min")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+
+    +slide
+      +review("twitter.png", "AOD New York @aod", "35 min")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+
+    +slide
+      +review("twitter.png", "AOD New York @aod", "35 min")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+
+  +grid
+    +col(4)
+      +col(6)
+        +product('product_1.jpg')
+      +col(6)
+        +product('product_2.jpg')
+      +col(12)
+        +product('product_3.jpg')
+    +col(2)
+      +product('product_4.jpg')._big
+    +col(2)
+      +product('product_5.jpg')._big
+    +col(4)
+      +col(12)
+        +product('product_6.jpg')
+      +col(6)
+        +product('product_7.jpg')
+      +col(6)
+        +product('product_8.jpg')
+
+  +section._dark
+    .container
+      +button()(href="#") DISCOVER THE SHOP

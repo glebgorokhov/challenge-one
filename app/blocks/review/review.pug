@@ -1,0 +1,9 @@
+mixin review(img, heading, time)
+  +b.review&attributes(attributes)
+    .container
+      +e.IMG.icon(src="assets/images/"+img)
+      +e.P.heading
+        =heading
+        +e.SPAN.time= time
+      +e.text
+        block

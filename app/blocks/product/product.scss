@@ -1,0 +1,55 @@
+.product {
+  display: block;
+  height: 267px;
+  overflow: hidden;
+  position: relative;
+
+  &_big {
+    height: 534px;
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
+  &__hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba($color-main, .8);
+    display: flex;
+    box-sizing: border-box;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $ease-main;
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+      margin-top: 3px;
+    }
+  }
+
+  &__hovertext {
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &:hover &__hover {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

@@ -1,0 +1,6 @@
+mixin product(src)
+  +b.product&attributes(attributes)
+    +e.IMG.image(src="assets/images/"+src)
+    +e.A.hover(href="#")
+      +e.IMG.icon(src="assets/images/velo.png")
+      +e.P.hovertext Shop now
