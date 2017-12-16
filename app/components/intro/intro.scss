@@ -1,9 +1,0 @@
-.intro {
-  display: block;
-  background-color: $color-lightbg;
-  height: 100vh;
-
-  &__bg {
-    @include fill-img;
-  }
-}
